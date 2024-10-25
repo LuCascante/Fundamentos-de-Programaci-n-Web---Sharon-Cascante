@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="favicon.png">
+    <meta charset="utf-8">
+    <title>Tarea 3 - Sharon Cascante</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reto8.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="reto1.html">Reto #1</a></li>
+                    <li><a href="reto2.html">Reto #2</a></li>
+                    <li><a href="reto3.html">Reto #3</a></li>
+                    <li><a href="reto4.html">Reto #4</a></li>
+                    <li><a href="reto5.html">Reto #5</a></li>
+                    <li><a href="reto6.html">Reto #6</a></li>
+                    <li><a href="reto7.html">Reto #7</a></li>
+                    <li><a href="reto8.html">Reto #8</a></li>
+                    <li><a href="reto9.html">Reto #9</a></li>
+                    <li><a href="reto10.html">Reto #10</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Registro de inventario</h1>
+
+    <form id="input-form">
+       <label for="nombre">Nombre del producto:</label>
+        <input type="text" id="nombre">
+
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion">
+
+        <label for="categoria">Categoría:</label>
+        <select id="category-select">
+            <option value="">Seleccione una categoría</option>
+            <option value="lacteos">Lacteos</option>
+            <option value="granos">Granos</option>
+            <option value="latas">Latas</option>
+            <option value="higiene">Higiene</option>
+            <option value="dulceria">Dulcería</option>
+        </select>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad">
+
+        <label for="costo">Costo:</label>
+        <input type="number" id="costo">
+
+        <button type="button" onclick="agregarProducto();">Agregar</button> 
+    </form>
+    
+
+    <hr>
+
+
+    <label for="seleccionarProducto">Seleccionar producto:</label>
+    <!-- Se hace un select vacio sin option para agregar dinamicamente -->
+    <select class="selectProducto" id="seleccionarProducto" onchange="mostrarProducto();">
+        <option>Seleccione un producto</option>
+    </select>
+
+    <section id="showProducto" style="margin-top: 30px;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Categoría</th>
+                    <th>Cantidad</th>
+                    <th>Costo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="nom-registro"></td>
+                    <td id="des-registro"></td>
+                    <td id="cat-registro"></td>
+                    <td id="cant-registro"></td>
+                    <td id="cost-registro"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+ 
+
+    </div>
+
+    <footer class="fondo">
+        <h2 class="text-white text-center">Sharon Cascante</h2>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/reto8.js"></script>
+</body>
+
+</html>
